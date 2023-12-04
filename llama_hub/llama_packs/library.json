@@ -61,13 +61,13 @@
   },
   "GradioReActAgentPack": {
     "id": "llama_packs/gradio_react_agent_chatbot",
-    "author": "andrei-fajardo",
-    "keywords": ["gradio", "react-agent", "chatbot", "tools"] 
+    "author": "nerdai",
+    "keywords": ["gradio", "react-agent", "chatbot", "tools"]
   },
   "GradioAgentChatPack": {
     "id": "llama_packs/gradio_agent_chat",
-    "author": "andrei-fajardo",
-    "keywords": ["gradio", "agent", "chatbot", "tools"] 
+    "author": "nerdai",
+    "keywords": ["gradio", "agent", "chatbot", "tools"]
   },
   "WeaviateSubQuestionPack": {
     "id": "llama_packs/sub_question_weaviate",
@@ -138,5 +138,15 @@
     "id": "llama_packs/amazon_product_extraction",
     "author": "jerryjliu",
     "keywords": ["amazon", "product", "extraction"]
+  },
+  "RagEvaluatorPack": {
+    "id": "llama_packs/rag_evaluator",
+    "author": "nerdai",
+    "keywords": ["rag", "evaluation", "benchmarks"]
+  },
+  "LlamaDatasetMetadataPack": {
+    "id": "llama_packs/llama_dataset_metadata",
+    "author": "nerdai",
+    "keywords": ["llamadataset", "rag", "evaluation", "submission"]
   }
-} 
+}
