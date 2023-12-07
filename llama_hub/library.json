@@ -1096,6 +1096,14 @@
       "web reader"
     ]
   },
+  "StripeDocsReader": {
+    "id": "stripe_docs",
+    "author": "amorriscode",
+    "keywords":[
+      "stripe",
+      "documentation"
+    ]
+  },
   "EarningsCallTranscript":{
     "id":"earnings_call_transcript",
     "author": "Athe-kunal",
@@ -1108,5 +1116,15 @@
   "OpensearchReader": {
     "id": "opensearch",
     "author": "chnsagitchen"
+  },
+  "DocstringWalker": {
+    "id": "docstring_walker",
+    "author": "Filip Wojcik",
+    "keywords": [
+      "docstring",
+      "python",
+      "code",
+      "source code"
+    ]
   }
 }
