@@ -1,8 +1,41 @@
 # ChangeLog
 
+## v[0.0.66] - 2024-01-04
+
+### New Features
+- add ragatouille pack  (#836)
+- TelegramLoader (#822)
+
+### Smaller Features + Bug Fixes / Nits
+- handle bytestring (#834)
+- Slack Tool: Fix "fn_schema is None" issue (#824)
+-  Wikipedia tools should return text, not documents (Tools aren't DataLoaders!) (#828)
+- Fixing JsonReader and introducing unit tests (#816)
+- Fix:dense pack naming error in usage example notebook (#831)
+- chore: get the full detailed text from Confluence (#809)
+- feat: fix folder name and add keywords (#829)
+
+## v[0.0.65] - 2023-12-29
+
+### New Features
+- Add Powerpoint Slide Loader PptxSlideReader to LLama-hub (#796)
+- Added notebook for llama_guard_moderator pack (#814)
+- add llm compiler pack  (#820)
+
+### Smaller Features + Bug Fixes / Nits 
+- docs: Address branding issues of Apache OpenDAL (#817)
+
+## v[0.0.63] - 2023-12-22
+
+### New Features
+- add multi doc autoretrieval pack (#803) 
+
+### Smaller Features + Bug Fixes / Nits
+- Extract metadata from Azure BLOB (#804)
+
 ## v[0.0.62] - 2023-12-21
 
-## New Features
+### New Features
 
 - Add `MiniEsgBenchDataset` (#799)
 - Add `PDFPlubmerReader` (#798)

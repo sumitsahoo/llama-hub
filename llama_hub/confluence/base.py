@@ -2,6 +2,7 @@
 import logging
 import os
 from typing import Dict, List, Optional
+from urllib.parse import unquote
 
 from llama_index.readers.base import BaseReader
 from llama_index.readers.schema.base import Document
@@ -166,7 +167,7 @@ class ConfluenceReader(BaseReader):
                     max_num_results=max_num_results,
                     space=space_key,
                     status=page_status,
-                    expand="body.storage.value",
+                    expand="body.export_view.value",
                     content_type="page",
                 )
             )
@@ -177,7 +178,7 @@ class ConfluenceReader(BaseReader):
                     cursor=cursor,
                     cql=f'type="page" AND label="{label}"',
                     max_num_results=max_num_results,
-                    expand="body.storage.value",
+                    expand="body.export_view.value",
                 )
             )
         elif cql:
@@ -187,7 +188,7 @@ class ConfluenceReader(BaseReader):
                     cursor=cursor,
                     cql=cql,
                     max_num_results=max_num_results,
-                    expand="body.storage.value",
+                    expand="body.export_view.value",
                 )
             )
         elif page_ids:
@@ -211,7 +212,7 @@ class ConfluenceReader(BaseReader):
                     self._get_data_with_retry(
                         self.confluence.get_page_by_id,
                         page_id=page_id,
-                        expand="body.storage.value",
+                        expand="body.export_view.value",
                     )
                 )
 
@@ -268,13 +269,18 @@ class ConfluenceReader(BaseReader):
         return ret
 
     def _get_cql_data_with_paging(
-        self, cql, start=0, cursor=None, max_num_results=50, expand="body.storage.value"
+        self,
+        cql,
+        start=0,
+        cursor=None,
+        max_num_results=50,
+        expand="body.export_view.value",
     ):
         max_num_remaining = max_num_results
         ret = []
         params = {"cql": cql, "start": start, "expand": expand}
         if cursor:
-            params["cursor"] = cursor
+            params["cursor"] = unquote(cursor)
 
         if max_num_results is not None:
             params["limit"] = max_num_remaining
@@ -295,7 +301,7 @@ class ConfluenceReader(BaseReader):
 
             if "cursor=" in next_url:  # On confluence Server this is not set
                 cursor = next_url.split("cursor=")[1].split("&")[0]
-                params["cursor"] = cursor
+                params["cursor"] = unquote(cursor)
 
             if max_num_results is not None:
                 params["limit"] -= len(results["results"])
@@ -320,7 +326,7 @@ class ConfluenceReader(BaseReader):
             attachment_texts = self.process_attachment(page["id"])
         else:
             attachment_texts = []
-        text = text_maker.handle(page["body"]["storage"]["value"]) + "".join(
+        text = text_maker.handle(page["body"]["export_view"]["value"]) + "".join(
             attachment_texts
         )
         return Document(
