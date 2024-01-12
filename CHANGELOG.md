@@ -1,5 +1,21 @@
 # ChangeLog
 
+## v[0.0.70] - 2024-01-11
+
+### New Features
+- add semantic chunker llama pack (#853)
+- Feature/add agent search (#844)
+
+## v[0.0.69] - 2024-01-08
+
+### New Features
+- add rag fusion query pipeline pack (#847)
+
+## v[0.0.67] - 2024-01-07
+
+### Security Fix
+- Fixed security flaw when loading yaml, should always use `yaml.safe_load()` (#841)
+
 ## v[0.0.66] - 2024-01-04
 
 ### New Features
