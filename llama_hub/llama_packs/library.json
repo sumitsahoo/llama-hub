@@ -242,5 +242,20 @@
     "id": "llama_packs/agent_search_retriever",
     "author": "logan-markewich",
     "keywords": ["agent", "search", "retriever"]
+  },
+  "ChainOfTablePack": {
+    "id": "llama_packs/tables/chain_of_table",
+    "author": "jerryjliu",
+    "keywords": ["chain", "table", "tables"]
+  },
+  "MixSelfConsistencyPack": {
+    "id": "llama_packs/tables/mix_self_consistency",
+    "author": "Disiok",
+    "keywords": ["chain", "table", "tables", "pandas", "dataframe"]
+  },
+  "MultiTenancyRAGPack": {
+    "id": "llama_packs/multi_tenancy_rag",
+    "author": "ravi03071991",
+    "keywords": ["multi-tenancy", "multi", "tenancy", "rag"]
   }
 }
