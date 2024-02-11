@@ -1,5 +1,47 @@
 # ChangeLog
 
+## v[0.0.78] - 2024-02-05
+
+### New Features
+- add local RAG CLI variant  (#916)
+- Simple short-form Self-RAG Pack (#907)
+
+### Smaller Features + Bug Fixes / Nits
+- fix: store the str path instead of the Path object (#917)
+- Update base.py in paged_csv (#839)
+- Fix to confluence loader documentation. (#920)
+- yahoo finance key word addition to read me file for better search experience in llamahub (#897)
+
+## v[0.0.77] - 2024-01-29
+
+### New Features
+- add infer-retrieve-rerank  pack  (#911)
+- feat/add-llama-retriver-examples (#910)
+
+### Smaller Features + Bug Fixes / Nits
+- fix tools/openai_image_generation import (#906)
+
+## v[0.0.76] - 2024-01-26
+
+### New Features
+- Convert Metaphor documentation to Exa (#896)
+- Add XML loader (#887)
+- Add Couchbase Reader (#892)
+- Support ArangoDB simple loader (#900)
+
+### Smaller Features + Bug Fixes / Nits
+- feat: add example option for llamapack library (#895)
+- fix import main_content_extractor (#891)
+- feat: example for rag evaluator pack (#882)
+- feat: example for voyage query engine pack (#880)
+- RAGatouille metadata support (#893)
+
+## v[0.0.75] - 2024-01-20
+
+### New Features
+
+- add vanna pack (#889)
+
 ## v[0.0.74] - 2024-01-19
 
 ### New Features
